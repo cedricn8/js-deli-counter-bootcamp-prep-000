@@ -22,7 +22,7 @@ function currentLine(katzDeliLine8) {
       if (katzDeliLine8.length - i > 1) {
         message = "," + message;
       }
-      message = message + " " + parseInt(i) + 1 + ". " + katzDeliLine8.[i]
+      message = message + " " + parseInt(i) + 1 + ". " + katzDeliLine8[i]
     }
   }
   else {
