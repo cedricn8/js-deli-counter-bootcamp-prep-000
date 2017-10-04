@@ -15,18 +15,20 @@ function nowServing(katzDeliLine) {
 }
 
 function currentLine(katzDeliLine8) {
-  var message = "";
-  if (katzDeliLine8.length > 0) {
-    message = "The line is currently";
-    for (var i = 0; i < katzDeliLine8.length; i++) {
-      if (katzDeliLine8.length - i > 1) {
-        message = "," + message;
+    var message = "";
+    var counter = 0;
+    if (katzDeliLine8.length > 0) {
+      message = "The line is currently";
+      for (var i = 0; i < katzDeliLine8.length; i++) {
+        counter = i + 1  
+        message = message + " " + counter + ". " + katzDeliLine8[i]
+        if (katzDeliLine8.length - counter > 0) {
+            message = message + ",";
+        }
       }
-      message = message + " " + parseInt(i) + 1 + ". " + katzDeliLine8[i]
     }
-  }
-  else {
-    message = "The line is currently empty."
-  }
-  return message;
+    else {
+      message = "The line is currently empty."
+    }
+    return message;
 }
