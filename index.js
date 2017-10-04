@@ -21,8 +21,8 @@ function currentLine(katzDeliLine8) {
     for (var i = 0; i < katzDeliLine8.length; i++) {
       if (katzDeliLine8.length - i > 1) {
         message = "," + message;
-      } 
-      message = message + " " + i+1 + ". " + katzDeliLine8.[i]
+      }
+      message = message + " " + parseInt(i) + 1 + ". " + katzDeliLine8.[i]
     }
   }
   else {
